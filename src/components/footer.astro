@@ -1,0 +1,18 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="mt-20 py-8 border-t border-text-normal/10">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+        <div class="flex flex-col items-center justify-center space-y-4">
+            <p class="text-text-normal text-sm">
+                {currentYear} • Built with
+                <span class="text-text-accent">❤️</span>
+                 using
+                <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="text-text-highlight hover:text-text-accent transition-colors">
+                    Astro
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>

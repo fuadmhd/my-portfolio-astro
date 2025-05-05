@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import "tailwindcss";
+
+@theme {
+    --color-primary-background: #323437;
+    --color-secondary-background: #2c2e31bb;
+    --color-text-normal: #646669;
+    --color-text-highlight: #c1c1b7;
+    --color-text-accent: #e2b714;
+    --font-display: "IBM Plex Mono", monospace;
+}
+
+* {
+    scroll-behavior: smooth;
+}

@@ -1,0 +1,48 @@
+---
+
+const workExperiences = [
+    {
+
+        name: 'Bazara Motors',
+        pos: 'Fullstack Developer',
+        duration: '2023 - Present',
+        title : 'i worked as a fullstack developer at bazra motors , using Next,js and react with typescript for building internal tools',
+    },
+    {
+
+        name: 'Freelancing',
+        pos: 'Fullstack Developer',
+        duration: '2022 - Present',
+        title : 'Worked as a freelance developer building internal tools and interactive web applications for clients, using React and Next.js. Projects often involved handling large amounts of data and supporting business-specific workflows, you can some of them down below',
+    }
+]
+---
+
+<div id="work" class="mt-30 mx-auto sm:py-6 max-w-5xl sm:px-5 px-2.5 rounded-lg text-text-normal bg-secondary-background bg-black-200">
+    <h1 class="text-2xl text-center font-display font-bold text-text-accent/70 mb-6">Work Experiences</h1>
+    <div class="">
+        {workExperiences.map((item, index) => (
+        <div
+            class="grid grid-cols-[auto_1fr] items-start gap-5 transition-all ease-in-out duration-500 cursor-pointer hover:bg-black-300 sm:px-5 px-2.5 border-l border-black-300 group relative"
+
+        >
+            {/* Timeline ball aligned with title */}
+            <div class="flex flex-col items-center h-full">
+                <div class="absolute left-0 transform -translate-x-1/2 top-6 w-3 h-3 rounded-full bg-text-highlight border-2 border-black-300 z-10"></div>
+                <div class="flex-1 w-0.5 mt-4 h-full bg-black-300 group-hover:bg-black-500 group-last:hidden"></div>
+            </div>
+
+            {/* Content aligned with ball */}
+            <div class="sm:p-5 px-2.5 py-5">
+                <p class="font-bold text-text-highlight">{item.name}</p>
+                <p class="text-sm mb-5 text-text-highlight">
+                    {item.pos} <span class="mx-2">•</span> <span>{item.duration}</span>
+                </p>
+                <p class="group-hover:text-white transition-all ease-in-out duration-500">
+                    {item.title}
+                </p>
+            </div>
+        </div>
+        ))}
+    </div>
+</div>

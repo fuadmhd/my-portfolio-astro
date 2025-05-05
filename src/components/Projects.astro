@@ -1,0 +1,69 @@
+---
+import { Image } from "astro:assets"
+import prepwise from '../assets/projects/PrepWise.png'
+import oasis from '../assets/projects/oasis.png'
+import oasis2 from '../assets/projects/oasis2.png'
+import inventory from '../assets/projects/inventory.png'
+
+const projects =[
+    {
+        image: prepwise,
+        title: 'PrepWise',
+        description: 'Ai Agent Help Interview Prep',
+        TechStack: 'Next.js , vapi , firebase ,Gemini',
+        href:"https://interview-prep-rust-three.vercel.app/"
+    },
+    {
+        image: oasis,
+        title: 'The Wild Oasis',
+        description: 'Internal Tool for Oasis',
+        TechStack: 'React  , Supabase',
+        href:"https://the-wild-oasis-76fz.vercel.app"
+    },
+    {
+        image: oasis2,
+        title: 'The Wild Oasis Public',
+        description: 'Public facing WebSite for Oasis',
+        TechStack: 'Next.js  , Supabase',
+        href:"https://the-wild-oasis-page.vercel.app/"
+    },
+    {
+        image: inventory,
+        title: 'Inventory Management',
+        description: 'Store and Expense Management',
+        TechStack: 'Next.js  , Supabase',
+        href:"https://inventery-template.netlify.app"
+    },
+]
+---
+
+
+<section id="projects" class="max-w-5xl flex mt-10 flex-col items-center gap-6 mx-auto px-4">
+    <h1 class="text-2xl font-bold  text-text-accent/70">Projects</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2  gap-5">
+        {
+            projects.map((project) => (
+                <div class="max-w-sm rounded-lg h-full p-3 text-text-normal bg-secondary-background">
+
+                    <div class=" border-b border-l border-r rounded-t-lg rounded-lg border-amber-50/ overflow-hidden  ">
+                        <Image
+                        src={project.image}
+                        width={500}
+                        height={300}
+                        alt={project.title}
+                        class="object-cover rounded-lg"
+                      />
+                     <div class="px-4 py-3 flex flex-col flex-grow">
+                        <h2 class="text-lg text-text-highlight font-bold mb-2">{project.title}</h2>
+                        <p class="mb-2 text-text-highlight/70">{project.description}</p>
+                        <p class="mb-2 text-text-highlight/70">{project.TechStack}</p>
+                    </div>
+                        <div class="border-t mt-auto self-end border-amber-50/ flex items-center justify-between py-2 px-2">
+                        <a href={project.href} target="_blank" class="border text-text-highlight border-amber-50/ rounded-lg px-2 py-1 hover:bg-text-highlight/40">View Project</a>
+                    </div>
+
+                    </div>
+                </div>
+            ))
+        }
+</section>

@@ -1,0 +1,84 @@
+---
+import { Image } from "astro:assets";
+import heroImg from '../assets/profile.png';
+---
+
+
+
+<section
+  class=" w-full flex mt-10 sm:mt-20 items-center overflow-hidden relative "
+
+>
+  <div class="w-full z-10 max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-center gap-8">
+    <div class="w-full flex-1 mx-auto items-center flex flex-col gap-8 justify-center">
+   <div class="flex max-w-4xl  px-4 py-2 rounded-lg flex-col sm:flex-row items-center justify-center gap-8">
+       <div class=" max-w-[10rem] mt-5 mx-auto relative lg:pl-8">
+        <Image
+          src={heroImg}
+          alt="hero"
+          class="w-full h-full object-cover"
+          width={400}
+          height={400}
+        />
+        </div>
+      <div class="space-y-3">
+        <p class="font-display text-center max-sm:text-2xl text-4xl font-bold leading-[1.2] text-text-highlight">
+       Fuad Mohammed
+        </p>
+        <p class="font-display text-center max-sm:text-2xl text-3xl leading-[1.2] font-bold  text-text-accent/70">
+          Full Stack Developer
+        </p>
+      </div>
+    </div>
+
+      <div class="space-y-4">
+
+        <p class="font-display text-mg  max-w-2xl px-2 text-center md:text-xl text-text-highlight/70">
+            I build full-stack web applications that handle complex data, secure authentication, and permission systems designed for real-world scale and reliability.
+        </p>
+      </div>
+
+      <div class="flex gap-4 pt-4">
+        <a href="#work"  class="group scroll-smooth">
+          <button class="font-display font-semibold flex items-center gap-4 bg-secondary-background w-fit px-6 py-3 rounded-lg text-text-highlight hover:bg-text-highlight/10 hover:text-text-highlight/90 transition-all duration-300">
+            <span>Check My Work</span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 18 18"
+              fill="currentColor"
+              class="group-hover:translate-x-1 transition-transform duration-300"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.7216 2.49713L10.125 1.90051L8.93176 3.09376L9.52838 3.69038L13.9942 8.15626H1.96875H1.125V9.84375H1.96875H13.9942L9.52838 14.3097L8.93176 14.9062L10.125 16.0995L10.7216 15.5028L16.429 9.79549C16.8684 9.35616 16.8684 8.64384 16.429 8.20451L10.7216 2.49713Z"
+              ></path>
+            </svg>
+          </button>
+        </a>
+
+        <a href="#contact" class="group">
+          <button class="font-display font-semibold flex items-center gap-4 bg-secondary-background w-fit px-6 py-3 rounded-lg text-text-highlight hover:bg-text-highlight/10 hover:text-text-highlight/90 transition-all duration-300">
+            <span>Contact Me</span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 18 18"
+              fill="currentColor"
+              class="group-hover:translate-x-1 transition-transform duration-300"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.7216 2.49713L10.125 1.90051L8.93176 3.09376L9.52838 3.69038L13.9942 8.15626H1.96875H1.125V9.84375H1.96875H13.9942L9.52838 14.3097L8.93176 14.9062L10.125 16.0995L10.7216 15.5028L16.429 9.79549C16.8684 9.35616 16.8684 8.64384 16.429 8.20451L10.7216 2.49713Z"
+              ></path>
+            </svg>
+          </button>
+        </a>
+      </div>
+    </div>
+
+
+  </div>
+</section>

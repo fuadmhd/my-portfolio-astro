@@ -1,0 +1,18 @@
+---
+const navItems = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Projects', href: '/projects' },
+    { name: 'Contact', href: '/contact' },
+
+
+]
+---
+
+<header class="bg-secondary-background md:mt-10 max-md:w-full md:max-w-3xl flex h-12 justify-center items-center gap-5 mx-auto md:rounded-lg">
+    {navItems.map((item) => (
+        <a href={item.href} class="text-text-normal text-xl hover:text-text-highlight">
+            {item.name}
+        </a>
+    ))}
+</header>
