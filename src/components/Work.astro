@@ -18,18 +18,18 @@ const workExperiences = [
 ]
 ---
 
-<div id="work" class="mt-30 mx-auto sm:py-6 max-w-5xl sm:px-5 px-2.5 rounded-lg text-text-normal bg-secondary-background bg-black-200">
+<div id="work" class="mt-30 mx-auto sm:py-6 max-w-5xl sm:px-5 px-2.5 rounded-lg text-text-normal bg-secondary-background ring-1 ring-text-normal/10">
     <h1 class="text-2xl text-center font-display font-bold text-text-accent/70 mb-6">Work Experiences</h1>
     <div class="">
         {workExperiences.map((item, index) => (
         <div
-            class="grid grid-cols-[auto_1fr] items-start gap-5 transition-all ease-in-out duration-500 cursor-pointer hover:bg-black-300 sm:px-5 px-2.5 border-l border-black-300 group relative"
+            class="grid grid-cols-[auto_1fr] items-start gap-5 transition-all ease-in-out duration-300 cursor-pointer hover:bg-text-highlight/5 sm:px-5 px-2.5 border-l border-text-normal/20 group relative"
 
         >
             {/* Timeline ball aligned with title */}
             <div class="flex flex-col items-center h-full">
-                <div class="absolute left-0 transform -translate-x-1/2 top-6 w-3 h-3 rounded-full bg-text-highlight border-2 border-black-300 z-10"></div>
-                <div class="flex-1 w-0.5 mt-4 h-full bg-black-300 group-hover:bg-black-500 group-last:hidden"></div>
+                <div class="absolute left-0 transform -translate-x-1/2 top-6 w-3 h-3 rounded-full bg-text-highlight border-2 border-text-normal/30 z-10"></div>
+                <div class="flex-1 w-0.5 mt-4 h-full bg-text-normal/20 group-hover:bg-text-normal/30 group-last:hidden"></div>
             </div>
 
             {/* Content aligned with ball */}
@@ -38,7 +38,7 @@ const workExperiences = [
                 <p class="text-sm mb-5 text-text-highlight">
                     {item.pos} <span class="mx-2">•</span> <span>{item.duration}</span>
                 </p>
-                <p class="group-hover:text-white transition-all ease-in-out duration-500">
+                <p class="group-hover:text-text-highlight transition-all ease-in-out duration-300 text-text-highlight/80">
                     {item.title}
                 </p>
             </div>

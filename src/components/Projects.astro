@@ -4,8 +4,26 @@ import prepwise from '../assets/projects/PrepWise.png'
 import oasis from '../assets/projects/oasis.png'
 import oasis2 from '../assets/projects/oasis2.png'
 import inventory from '../assets/projects/inventory.png'
+import resume from '../assets/projects/ai resume builder.png'
+import  figma from '../assets/projects/real time codesing.png'
+
 
 const projects =[
+     {
+        image: resume,
+        title: 'AI Resume Builder',
+        description: 'AI Resume Builder with custom designs',
+        TechStack: 'Next.js  , Prisma , Postgres , neon, gemini , shadcn , Clerk',
+        href:"https://aiforresumes.vercel.app"
+    },
+    {
+        image: figma,
+        title: 'Designing Tool',
+        description: ' real time designing tool for teams',
+        TechStack: 'Next.js , drizzle ORM , liveblocks , Postgres , neon, shadcn , Betterauth',
+        href:"https://real-time-codesign.vercel.app"
+    },
+
     {
         image: prepwise,
         title: 'PrepWise',
@@ -36,34 +54,38 @@ const projects =[
     },
 ]
 ---
-
+ 
 
 <section id="projects" class="max-w-5xl flex mt-10 flex-col items-center gap-6 mx-auto px-4">
     <h1 class="text-2xl font-bold  text-text-accent/70">Projects</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2  gap-5">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
         {
             projects.map((project) => (
-                <div class="max-w-sm rounded-lg h-full p-3 text-text-normal bg-secondary-background">
-
-                    <div class=" border-b border-l border-r rounded-t-lg rounded-lg border-amber-50/ overflow-hidden  ">
+                <article class="group rounded-xl h-full text-text-normal bg-secondary-background/100 ring-1 ring-text-normal/10 hover:ring-text-normal/20 transition-all duration-300 overflow-hidden">
+                    <div class="aspect-[16/10] w-full overflow-hidden">
                         <Image
-                        src={project.image}
-                        width={500}
-                        height={300}
-                        alt={project.title}
-                        class="object-cover rounded-lg"
-                      />
-                     <div class="px-4 py-3 flex flex-col flex-grow">
-                        <h2 class="text-lg text-text-highlight font-bold mb-2">{project.title}</h2>
-                        <p class="mb-2 text-text-highlight/70">{project.description}</p>
-                        <p class="mb-2 text-text-highlight/70">{project.TechStack}</p>
+                            src={project.image}
+                            width={800}
+                            height={500}
+                            alt={project.title}
+                            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                        />
                     </div>
-                        <div class="border-t mt-auto self-end border-amber-50/ flex items-center justify-between py-2 px-2">
-                        <a href={project.href} target="_blank" class="border text-text-highlight border-amber-50/ rounded-lg px-2 py-1 hover:bg-text-highlight/40">View Project</a>
+                    <div class="px-4 py-4 flex flex-col gap-2">
+                        <h2 class="text-lg text-text-highlight font-bold">{project.title}</h2>
+                        <p class="text-text-highlight/70">{project.description}</p>
+                        <p class="text-sm text-text-highlight/60">{project.TechStack}</p>
+                        <div class="pt-3">
+                            <a href={project.href} target="_blank" rel="noopener noreferrer" aria-label={`Open ${project.title} project`}
+                               class="inline-flex items-center gap-2 border border-text-normal/20 text-text-highlight rounded-lg px-3 py-1.5 hover:bg-text-highlight/10 focus:outline-none focus:ring-2 focus:ring-text-accent/40 transition-colors">
+                                View Project
+                                <svg width="16" height="16" viewBox="0 0 18 18" fill="currentColor" class="transition-transform group-hover:translate-x-0.5">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7216 2.49713L10.125 1.90051L8.93176 3.09376L9.52838 3.69038L13.9942 8.15626H1.96875H1.125V9.84375H1.96875H13.9942L9.52838 14.3097L8.93176 14.9062L10.125 16.0995L10.7216 15.5028L16.429 9.79549C16.8684 9.35616 16.8684 8.64384 16.429 8.20451L10.7216 2.49713Z"></path>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-
-                    </div>
-                </div>
+                </article>
             ))
         }
 </section>
