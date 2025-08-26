@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import heroImg from '../assets/profile.png';
+import heroImg from '../assets/port-3.jpg';
 ---
 
 
@@ -11,21 +11,27 @@ import heroImg from '../assets/profile.png';
 >
   <div class="w-full z-10 max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-center gap-8">
     <div class="w-full flex-1 mx-auto items-center flex flex-col gap-8 justify-center">
-   <div class="flex max-w-4xl px-4 py-2 rounded-lg flex-col sm:flex-row items-center justify-center gap-8">
-       <div class=" max-w-[10rem] mt-5 mx-auto relative lg:pl-8">
+   <div class="flex max-w-4xl px-4 py-2 rounded-lg items-center justify-center gap-4 sm:gap-6">
+      {/* Avatar + text (side by side like social apps) */}
+      <div class="avatar group relative w-24 h-24 sm:w-28 sm:h-28">
         <Image
           src={heroImg}
           alt="hero"
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover rounded-full"
           width={400}
           height={400}
         />
-        </div>
-      <div class="space-y-3">
-        <p class="font-display text-center max-sm:text-2xl text-4xl font-bold leading-[1.2] text-text-highlight">
-       Fuad Mohammed
+        {/* Hover gold ring draw */}
+        <svg class="pointer-events-none absolute inset-0 ring-svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+          <circle cx="50" cy="50" r="48" class="ring-circle" />
+        </svg>
+      </div>
+
+      <div class="min-w-0">
+        <p class="font-display text-4xl max-sm:text-2xl font-bold leading-[1.2] text-text-highlight truncate">
+          Fuad Mohammed
         </p>
-        <p class="font-display text-center max-sm:text-2xl text-3xl leading-[1.2] font-bold  text-text-accent/70">
+        <p class="font-display text-3xl max-sm:text-2xl leading-[1.2] font-bold text-text-accent/70 truncate">
           Full Stack Developer
         </p>
       </div>
@@ -34,7 +40,7 @@ import heroImg from '../assets/profile.png';
       <div class="space-y-4">
 
         <p class="font-display text-md max-w-2xl px-2 text-center md:text-xl text-text-highlight/70">
-            I build full-stack web applications that handle complex data, secure authentication, and permission systems designed for real-world scale and reliability.
+            TypeScript developer experienced in creating end-to-end solutions, from backend APIs to frontend interfaces.
         </p>
       </div>
 
@@ -82,3 +88,18 @@ import heroImg from '../assets/profile.png';
 
   </div>
 </section>
+
+<style>
+  .ring-svg { width: 100%; height: 100%; }
+  .ring-circle {
+    fill: none;
+    stroke: #d4af37; /* gold */
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 301.592; /* ~2πr with r=48 */
+    stroke-dashoffset: 301.592;
+    transition: stroke-dashoffset 1s ease;
+    opacity: 0.9;
+  }
+  .avatar:hover .ring-circle { stroke-dashoffset: 0; }
+</style>
